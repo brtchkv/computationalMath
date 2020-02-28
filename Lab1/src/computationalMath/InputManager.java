@@ -167,9 +167,9 @@ public class InputManager {
         double[] result = iterationMatrix.getApproximation();
 
         int iters = iterationMatrix.getIterations();
-        System.out.println("Точность: " + epsilon);
-        System.out.printf("Число итераций: %s\n", iters);
-        System.out.printf("Ответ:\n", iters);
+        System.out.println("Точность – " + epsilon);
+        System.out.printf("Количество итераций: %s\n", iters);
+        System.out.printf("Результат:\n", iters);
         for (int i = 0; i < result.length; i++) {
             System.out.printf("x%s: %s\n", i+1, result[i]);
         }

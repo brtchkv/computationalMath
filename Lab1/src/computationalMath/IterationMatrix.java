@@ -14,28 +14,6 @@ public class IterationMatrix {
     }
 
     /*
-     * Check whether the matrix is Diagonally Dominant
-     */
-    public boolean isDiagonallyDominant() {
-        double otherTotal;
-        // Loop through every row in the array
-        for(int row = 0; row < matrix.length; row++) {
-            otherTotal = 0;
-            // Loop through every element in the row
-            for(int column = 0; column < (matrix[row].length - 1); column++) {
-                if(column != row) {
-                    otherTotal += Math.abs(matrix[row][column]);
-                }
-            }
-            // If this diagonal element is less than the matrix is not dominant
-            if(Math.abs(matrix[row][row]) < otherTotal) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /*
      * Applies the formula Cij = -Aij/Aii (if i != j) or Cij = 0 (if i == j)
      */
     public void transformMatrixToXFormed() {
