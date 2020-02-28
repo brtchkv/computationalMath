@@ -25,7 +25,7 @@ public class InputManager {
                         "\n 1 для считывания данных для задания из файла " +
                         "\n q для выхода из программы: ");
                 System.out.println();
-                System.out.println("> ");
+                System.out.print("> ");
                 String token = in.next();
                 switch (token) {
                     case "0":
@@ -152,12 +152,11 @@ public class InputManager {
     }
 
     public void calculateAnswer() {
-        if (!iterationMatrix.isDiagonallyDominant()) {
+        if (!iterationMatrix.makeDominant()) {
             System.out.println("Матрица без диагонального преобладания!");
             System.out.println();
             return;
         }
-
         iterationMatrix.transformMatrixToXFormed();
 
         //loop over the Xk values till the needed accuracy is reached
@@ -169,7 +168,7 @@ public class InputManager {
 
         int iters = iterationMatrix.getIterations();
         System.out.println("Точность: " + epsilon);
-        System.out.printf("Число итераций: %s", iters);
+        System.out.printf("Число итераций: %s\n", iters);
         System.out.printf("Ответ:\n", iters);
         for (int i = 0; i < result.length; i++) {
             System.out.printf("x%s: %s\n", i+1, result[i]);

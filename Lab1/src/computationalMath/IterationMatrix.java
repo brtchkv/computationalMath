@@ -14,7 +14,7 @@ public class IterationMatrix {
     }
 
     /*
-     * Check whether the matrix is DiagonallyDominant
+     * Check whether the matrix is Diagonally Dominant
      */
     public boolean isDiagonallyDominant() {
         double otherTotal;
@@ -23,15 +23,12 @@ public class IterationMatrix {
             otherTotal = 0;
             // Loop through every element in the row
             for(int column = 0; column < (matrix[row].length - 1); column++) {
-                // If this element is NOT on the diagonal
                 if(column != row) {
-                    // Add it to the running total
                     otherTotal += Math.abs(matrix[row][column]);
                 }
             }
-            // If this diagonal element is LESS than the sum of the other ones...
+            // If this diagonal element is less than the matrix is not dominant
             if(Math.abs(matrix[row][row]) < otherTotal) {
-                // then the array isn't diagonally dominant and we can return.
                 return false;
             }
         }
@@ -102,6 +99,55 @@ public class IterationMatrix {
             approximation = computeXUsingPreviousApproximation(approximation);
         }
         iterations++;
+    }
+
+    /**
+     * Check whether the matrix is Diagonally Dominant, if not makes it so.
+     */
+    public boolean transformToDominant(int r, boolean[] V, int[] R) {
+        int n = matrix.length;
+        // if moved all of the rows then change initial matrix
+        if (r == matrix.length) {
+            double[][] T = new double[n][n + 1];
+            for (int i = 0; i < R.length; i++) {
+                for (int j = 0; j < n + 1; j++)
+                    T[i][j] = matrix[R[i]][j];
+            }
+            matrix = T;
+            return true;
+        }
+        //use recursion to move through all of the rows and search for the dominant elements
+        for (int i = 0; i < n; i++) {
+            if (V[i]) continue;
+
+            double sum = 0;
+
+            for (int j = 0; j < n; j++)
+                sum += Math.abs(matrix[i][j]);
+
+            if (2 * Math.abs(matrix[i][r]) > sum) {
+                V[i] = true;
+                R[r] = i;
+                if (transformToDominant(r + 1, V, R))
+                    return true;
+                V[i] = false;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check whether the matrix is Diagonally Dominant, if not makes it so.
+     */
+    public boolean makeDominant() {
+        //boolean array for highlighting moved rows
+        boolean[] visited = new boolean[matrix.length];
+        int[] rows = new int[matrix.length];
+
+        Arrays.fill(visited, false);
+
+        return transformToDominant(0, visited, rows);
     }
 
     public double getMaxDeviation() {
