@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="IterateMethod:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/IterateMethod_jar</output-path>
+    <root id="archive" name="IterateMethod.jar">
+      <element id="module-output" name="IterateMethod" />
+      <element id="library" level="project" name="json-simple-1.1" />
+    </root>
+  </artifact>
+</component>
