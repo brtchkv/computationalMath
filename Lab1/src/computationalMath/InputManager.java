@@ -3,7 +3,6 @@ package computationalMath;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -23,6 +22,7 @@ public class InputManager {
                 System.out.print("Для начала работы введите" +
                         "\n 0 чтобы ввести матрицу с клавиатуры," +
                         "\n 1 для считывания данных для задания из файла " +
+                        "\n 2 для рандомной генерации по введенной размерности" +
                         "\n q для выхода из программы: ");
                 System.out.println();
                 System.out.print("> ");
@@ -47,6 +47,13 @@ public class InputManager {
                             System.out.println("Неверный путь к файлу!");
                         }
                         break;
+                    case "2":
+                        System.out.println("Введите эпсилон:");
+                        epsilon = (Double.parseDouble(in.next()));
+                        System.out.println("Введите число размерности:");
+                        RandomNumbers n = new RandomNumbers();
+                        iterationMatrix = new IterationMatrix(n.get(Integer.parseInt(in.next())));
+                        break;
                     case "q":
                         System.exit(0);
                         break;
@@ -55,6 +62,7 @@ public class InputManager {
                 }
             } catch (Exception e) {
                 System.out.println("Неверный ввод, попробуйте заново.");
+                e.printStackTrace();
                 in.nextLine();
             }
     }
@@ -167,7 +175,7 @@ public class InputManager {
         double[] result = iterationMatrix.getApproximation();
 
         int iters = iterationMatrix.getIterations();
-        System.out.println("Точность – " + epsilon);
+        System.out.println("Точность: " + epsilon);
         System.out.printf("Количество итераций: %s\n", iters);
         System.out.printf("Результат:\n", iters);
         for (int i = 0; i < result.length; i++) {
