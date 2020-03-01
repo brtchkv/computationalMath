@@ -10,20 +10,6 @@ public class RandomNumbers {
     public double[][] get(int n) {
         System.out.println("¬ведите размер случайной матрицы");
 
-//        List<Double> numbers = new DoubleArrayPrompter().prompt().orElse(null);
-//        if (numbers == null || numbers.size() == 0)
-//            return null;
-//
-//        int size;
-//        if (numbers.size() == 1)
-//            size = (int)(double)numbers.get(0);
-//        else {
-//            double minSize = numbers.get(0);
-//            double maxSize = numbers.get(1);
-//            double result = minSize + Math.random()*(maxSize - minSize);
-//            size = (int)result;
-//        }
-//
         if (n < 0)
             return null;
 
