@@ -80,7 +80,7 @@ public class IterationMatrix {
     }
 
     /**
-     * Check whether the matrix is Diagonally Dominant, if not makes it so.
+     * Check whether the matrix is Diagonally Dominant, if not make it so.
      */
     public boolean transformToDominant(int r, boolean[] V, int[] R) {
         int n = matrix.length;
