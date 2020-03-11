@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c2cf739-56cb-48da-9151-479917cb100c" name="Default Changelist" comment="" />
+    <list default="true" id="5c2cf739-56cb-48da-9151-479917cb100c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/~$лаб2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/лаб2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/лаб2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/DoubleFunctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/DoubleFunctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/FunctorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/FunctorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,16 +22,22 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YuK2Cfw9MoaHf8qWVnkL68LGHr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.1523472" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,7 +53,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shilko.ru.integrate.Main" />
+      <option name="MAIN_CLASS_NAME" value="computationalMath.Main" />
       <module name="Lab2" />
       <extension name="coverage">
         <pattern>
@@ -70,10 +85,28 @@
       <workItem from="1583787378963" duration="1866000" />
       <workItem from="1583862449020" duration="892000" />
       <workItem from="1583867080829" duration="212000" />
+      <workItem from="1583867412318" duration="6297000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>

@@ -8,7 +8,7 @@ public class DoubleFunctor implements FunctorImpl<Double> {
         function = func;
     }
     @Override
-    public Double execute(Double arg) {
+    public Double applyXValue(Double arg) {
         return function.apply(arg);
     }
 }
