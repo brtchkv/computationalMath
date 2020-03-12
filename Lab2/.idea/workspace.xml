@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2cf739-56cb-48da-9151-479917cb100c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/~$лаб2.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/лаб2.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/лаб2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computationalMath/IO/IntegralIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/IO/IntegralIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/DoubleFunctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/DoubleFunctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/FunctorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/FunctorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/FunctorImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$лаб2.docx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,8 +83,23 @@
       <workItem from="1583787378963" duration="1866000" />
       <workItem from="1583862449020" duration="892000" />
       <workItem from="1583867080829" duration="212000" />
-      <workItem from="1583867412318" duration="6297000" />
+      <workItem from="1583867412318" duration="7444000" />
     </task>
+    <task id="LOCAL-00001" summary="report + code refactor">
+      <created>1583969016515</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583969016517</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added diagram source file">
+      <created>1583969079452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583969079452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +121,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="report + code refactor" />
+    <MESSAGE value="added diagram source file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added diagram source file" />
   </component>
 </project>

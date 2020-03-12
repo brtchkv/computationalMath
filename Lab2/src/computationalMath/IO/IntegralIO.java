@@ -19,8 +19,6 @@ public class IntegralIO {
         funcs.add(new Func<>(Math::sin, "y = sin(x)"));
         funcs.add(new Func<>((x) -> (Math.sqrt(x * x + 1) - 2),
                 "y = sqrt(x^2 + 1) - 2"));
-        funcs.add(new Func<>((x) -> (Math.cos(x * 2) + Math.pow(x / 2, 5)),
-                "y = cos(2x) - (x/2)^5"));
         funcs.add(new Func<>((x) -> (Math.pow(x, 5) + Math.pow(x, 2) - Math.pow(3, x)),
                 "y = x^5 + x^2 - 3^x"));
         funcs.add(new Func<>((x) -> (Math.log10(Math.pow(x, 4) + 3)),

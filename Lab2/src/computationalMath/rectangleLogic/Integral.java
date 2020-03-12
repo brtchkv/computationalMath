@@ -26,6 +26,7 @@ public class Integral {
     }
 
     public static Results integrate(double leftBound, double rightBound, DoubleFunctor func, double precision, Method method) {
+        precision /= 10;
         double prevSum = 0;
         double sum = 0;
         double accuracy = 0;
@@ -55,7 +56,6 @@ public class Integral {
             if (accuracy < precision)
                 break;
         }
-
         return new Results(sum, n, accuracy);
     }
 }
