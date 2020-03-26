@@ -4,10 +4,8 @@
     <list default="true" id="5c2cf739-56cb-48da-9151-479917cb100c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/computationalMath/IO/IntegralIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/IO/IntegralIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/DoubleFunctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/DoubleFunctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/FunctorImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$лаб2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/лаб2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/лаб2.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,11 @@
       <workItem from="1583787378963" duration="1866000" />
       <workItem from="1583862449020" duration="892000" />
       <workItem from="1583867080829" duration="212000" />
-      <workItem from="1583867412318" duration="7444000" />
+      <workItem from="1583867412318" duration="16715000" />
+      <workItem from="1584560475705" duration="2104000" />
+      <workItem from="1584796227135" duration="108000" />
+      <workItem from="1585086229464" duration="289000" />
+      <workItem from="1585159181146" duration="11236000" />
     </task>
     <task id="LOCAL-00001" summary="report + code refactor">
       <created>1583969016515</created>
@@ -99,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583969079452</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor">
+      <created>1584022104257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584022104258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +119,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -123,6 +134,7 @@
     </ignored-roots>
     <MESSAGE value="report + code refactor" />
     <MESSAGE value="added diagram source file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added diagram source file" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>

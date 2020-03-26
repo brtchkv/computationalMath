@@ -19,19 +19,15 @@ public class IntegralIO {
         funcs.add(new Func<>(Math::sin, "y = sin(x)"));
         funcs.add(new Func<>((x) -> (Math.sqrt(x * x + 1) - 2),
                 "y = sqrt(x^2 + 1) - 2"));
-        funcs.add(new Func<>((x) -> (Math.pow(x, 5) + Math.pow(x, 2) - Math.pow(3, x)),
-                "y = x^5 + x^2 - 3^x"));
-        funcs.add(new Func<>((x) -> (Math.log10(Math.pow(x, 4) + 3)),
-                "y = log10(x^4 + 3)"));
+        funcs.add(new Func<>((x) -> (Math.log(x)),
+                "y = ln(x)"));
+        funcs.add(new Func<>((x) -> (x / Math.abs(x)),
+                "y = x / |x|"));
         IntegralIO.init(funcs);
     }
 
     public static void init(List<Func<Double>> arg) {
         functions = arg;
-    }
-
-    public static void printHeader() {
-        System.out.println("Программа для нахождения определенного интеграла методом прямоугольников.");
     }
 
     public static void readData() {
@@ -107,12 +103,17 @@ public class IntegralIO {
                 in.nextLine();
             }
         }
-        var results = Integral.integrate(leftBound, rightBound,
-                new DoubleFunctor(functions.get(numberFunction).getFunction()),
-                precision, Method.values()[numberMethod]);
-        System.out.println("Результат: " + results.getResult());
-        System.out.println("Количество разбиений: " + results.getNumberDivision());
-        System.out.println("Погрешность: " + results.getAccuracy());
-        System.out.println();
+        var results = new Integral.Results(0, 0, 0);
+        try {
+                results = Integral.integrate(leftBound, rightBound,
+                        new DoubleFunctor(functions.get(numberFunction).getFunction()),
+                        precision, Method.values()[1]);
+                System.out.println("Результат: " + results.getResult());
+                System.out.println("Количество разбиений: " + results.getNumberDivision());
+                System.out.println("Погрешность: " + results.getAccuracy());
+                System.out.println();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
