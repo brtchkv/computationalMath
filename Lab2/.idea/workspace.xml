@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2cf739-56cb-48da-9151-479917cb100c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computationalMath/IO/IntegralIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/IO/IntegralIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computationalMath/rectangleLogic/Integral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/лаб2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/лаб2.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +82,7 @@
       <workItem from="1584560475705" duration="2104000" />
       <workItem from="1584796227135" duration="108000" />
       <workItem from="1585086229464" duration="289000" />
-      <workItem from="1585159181146" duration="11236000" />
+      <workItem from="1585159181146" duration="11632000" />
     </task>
     <task id="LOCAL-00001" summary="report + code refactor">
       <created>1583969016515</created>
@@ -108,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584022104258</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="сдал 2 лабу">
+      <created>1585240917022</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585240917022</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +139,7 @@
     <MESSAGE value="report + code refactor" />
     <MESSAGE value="added diagram source file" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="сдал 2 лабу" />
+    <option name="LAST_COMMIT_MESSAGE" value="сдал 2 лабу" />
   </component>
 </project>

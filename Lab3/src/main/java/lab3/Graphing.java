@@ -46,7 +46,7 @@ public class Graphing {
             xGraphing[i] = arg;
         }
 
-        chart.addSeries("Исходная функция e^x", xGraphing, yBaseFunction).setMarker(SeriesMarkers.NONE);
+        chart.addSeries("Исходная функция", xGraphing, yBaseFunction).setMarker(SeriesMarkers.NONE);
         chart.addSeries("Интерполированная функции", xGraphing, yPolynomial).
                 setMarker(SeriesMarkers.NONE);
 

@@ -87,21 +87,28 @@ public class UserInterface {
             }
 
             double changeX;
+            boolean changeMode = true;
             try {
                 changeX = Double.parseDouble(changeField.getText().replace(',', '.'));
             } catch (NumberFormatException e1) {
-                JOptionPane.showMessageDialog(jFrame, "Выберите узел, в котором нужно подменить значение функции",
-                        errorTitle, JOptionPane.ERROR_MESSAGE);
-                return;
+                changeMode = false;
+                changeX = 0;
             }
-
-            if (Arrays.stream(xData).noneMatch(n -> Double.compare(n, changeX) == 0)) {
-                JOptionPane.showMessageDialog(jFrame, "Точка, в которой нужно подменить " +
-                        "значение функции должна быть узлом интерполяции", errorTitle, JOptionPane.ERROR_MESSAGE);
-            }
-            else {
+            if (changeMode) {
+                double finalChangeX = changeX;
+                if (changeX != 0 && Arrays.stream(xData).noneMatch(n -> Double.compare(n, finalChangeX) == 0)) {
+                    JOptionPane.showMessageDialog(jFrame, "Точка, в которой нужно подменить " +
+                            "значение функции должна быть узлом интерполяции", errorTitle, JOptionPane.ERROR_MESSAGE);
+                } else {
+                    mainPanel.remove(graphicPanel);
+                    graphicPanel = getGraphicPanel(width, graphicHeight, changeX, changeMode);
+                    mainPanel.add(graphicPanel);
+                    mainPanel.revalidate();
+                    mainPanel.repaint();
+                }
+            } else {
                 mainPanel.remove(graphicPanel);
-                graphicPanel = getGraphicPanel(width, graphicHeight, changeX);
+                graphicPanel = getGraphicPanel(width, graphicHeight, changeX, changeMode);
                 mainPanel.add(graphicPanel);
                 mainPanel.revalidate();
                 mainPanel.repaint();
@@ -119,7 +126,6 @@ public class UserInterface {
         findValuePanel.add(findValueField);
 
         JLabel valueLabel = new JLabel(String.format("f(%s)=%s", "?", "?"));
-
 
         JButton findValueButton = new JButton("Найти");
         findValuePanel.add(valueLabel);
@@ -187,15 +193,21 @@ public class UserInterface {
         return argsPanel;
     }
 
-    private JPanel getGraphicPanel(int width, int height, double changeX) {
-        Lagrange newtonPolynomial = new Lagrange();
+    private JPanel getGraphicPanel(int width, int height, double changeX, boolean changeMode) {
+        Lagrange lagrangePolynomial = new Lagrange();
 
         Arrays.sort(xData);
-        double[] yData = Arrays.stream(xData).
-                map(x -> Double.compare(x, changeX) == 0 ? baseFunction.getValue(x) * Main.CHANGE :
-                        baseFunction.getValue(x)).toArray();
+        double[] yData;
+        if (changeMode) {
+             yData = Arrays.stream(xData).
+                    map(x -> Double.compare(x, changeX) == 0 ? baseFunction.getValue(x) * Main.CHANGE :
+                            baseFunction.getValue(x)).toArray();
+        } else {
+            yData = Arrays.stream(xData).
+                    map(x -> baseFunction.getValue(x)).toArray();
+        }
 
-        Function interpolateFunction = newtonPolynomial.interpolate(xData, yData);
+        Function interpolateFunction = lagrangePolynomial.interpolate(xData, yData);
         this.interpolateFunction = interpolateFunction;
 
         JPanel graphicPanel = new Graphing(baseFunction, interpolateFunction, xData).

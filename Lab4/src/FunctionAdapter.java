@@ -1,4 +1,6 @@
-package lab3;
+package lab4;
+
+import lab3.Function;
 
 public abstract class FunctionAdapter implements Function {
     @Override

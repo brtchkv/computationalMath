@@ -1,5 +1,4 @@
 package lab3;
-
 public class Lagrange {
     
     public Function interpolate(double[] xData, double[] yData) {
