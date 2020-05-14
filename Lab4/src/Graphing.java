@@ -27,7 +27,7 @@ public class Graphing {
         nodes.setMarker(SeriesMarkers.CIRCLE);
 
 
-        if (xData.length <= 11) {
+//        if (xData.length <= 11) {
             Lagrange lagrangePolynomial = new Lagrange();
             Function interpolateFunction = lagrangePolynomial.interpolate(xData, yData);
             double[] xGraphing = new double[width];
@@ -41,12 +41,12 @@ public class Graphing {
             XYSeries solution = chart.addSeries("Решение", xGraphing, yGraphing);
             solution.setMarker(SeriesMarkers.NONE);
             solution.setLineColor(Color.BLUE);
-        }
-        else{
-            nodes.setLineColor(Color.BLUE);
-            nodes.setMarker(SeriesMarkers.NONE);
-            nodes.setShowInLegend(true);
-        }
+//        }
+//        else {
+//            nodes.setLineColor(Color.BLUE);
+//            nodes.setMarkerColor(Color.RED);
+//            nodes.setShowInLegend(true);
+//        }
 
         return new XChartPanel<>(chart);
 

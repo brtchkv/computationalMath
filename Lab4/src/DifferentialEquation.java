@@ -34,7 +34,7 @@ public class DifferentialEquation {
         double segmentLength = endPoint - x0;
         do {
             intervals *= 2;
-            if(intervals > 200_000)
+            if(intervals > 10000000)
                 throw new SolutionException("Достигнут максимум разбиений");
             double h = segmentLength / intervals;
 

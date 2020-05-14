@@ -89,7 +89,6 @@ public class UserInterface {
         JLabel equationLabel = new JLabel("Выберите ДУ для решения:");
         pickPanel.add(equationLabel);
 
-        //ToDO:replace with streamApi
         String[] options = new String[equations.size()];
         for(int i = 0; i < options.length; i++)
             options[i] = equations.get(i).toString();
