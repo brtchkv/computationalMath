@@ -48,19 +48,21 @@ public class DifferentialEquation {
             setInitialData(xData, yData, h);
 
             double[] error = new double[yData.length - 4];
+            System.out.println(Arrays.toString(yData));
+            System.out.println(yData.length);
             for(int i = 4; i < yData.length; i++){
-                double prediction = yData[i - 4] + (4 * h / 3) * (2 * function.getValue(xData[i - 3], yData[i - 3])
-                        - function.getValue(xData[i - 2], yData[i - 2])
-                        + 2 * function.getValue(xData[i - 1], yData[i - 1]));
+                double prediction = yData[i - 1] + (1 * h / 24) * (55 * function.getValue(xData[i - 1], yData[i - 1])
+                        - 59 * function.getValue(xData[i - 2], yData[i - 2])
+                        + 37 * function.getValue(xData[i - 3], yData[i - 3]) - 9 * function.getValue(xData[i-4], yData[i-4]));
 
-                yData[i] = yData[i - 2] + h / 3 * (function.getValue(xData[i - 2], yData[i - 2])
-                        + 4 * function.getValue(xData[i - 1], yData[i - 1])
-                        + function.getValue(xData[i], prediction));
+                yData[i] = yData[i-1] + h / 24 * (- 5 * function.getValue(xData[i - 2], yData[i - 2])
+                        + 19 * function.getValue(xData[i - 1], yData[i - 1])
+                        + 9 * function.getValue(xData[i], prediction) + function.getValue(xData[i - 3], yData[i - 3]));
                 if(!Double.isFinite(yData[i]))
                     throw new SolutionException(String.format("При аргументе, лежащем внутри отрезка от %f до %f, " +
                             "значения функции выходят за пределы допустимых значений",
                             Math.min(x0, endPoint), Math.max(x0, endPoint)));
-                error[i - 4] = Math.abs(yData[i] - prediction) / 29;
+                error[i - 4] = Math.abs(yData[i] - prediction);
             }
             averageError = Arrays.stream(error).average().orElse(0);
         } while (averageError >= accuracy);
